@@ -1,0 +1,35 @@
+{% extends 'base_template.html' %}
+
+{% block title %}
+Профиль
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" href="/static/profile/css/profile.css">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12 d-flex">
+      <img class='profile_image' src="{{ avatar }}" alt="" />
+      <div class="profile_info">
+        <div class="usernameData d-flex">
+          <h1 class='profile_username'>{{ username }}</h1>
+          {% if request.user.username != username %}
+          <button class='follow_button'>Follow</button>
+          {% else %}
+          <input type="file" id='picInput' accept='image/jpeg,image/png'>
+          <button class='follow_button' id='updatePic'>update pic</button>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src='/static/profile/js/profileLogic.js'></script>
+{% endblock %}

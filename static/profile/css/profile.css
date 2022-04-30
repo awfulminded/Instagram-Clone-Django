@@ -1,0 +1,23 @@
+
+
+.profile_image {
+  width: 130px;
+  height: 130px;
+  border-radius: 10000px;
+}
+
+.profile_username {
+font-size: 28px;
+line-height: 32px;
+color: #262626;
+}
+
+.follow_button {
+  background: #0095F6;
+border-radius: 4px;
+color: white;
+outline: none;
+font-weight: 600;
+border: none;
+padding: 5px 25px
+}
